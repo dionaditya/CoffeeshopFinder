@@ -8,14 +8,79 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    
+    @State var searchText: String = ""
+    
+    private var coffeshopList: [Coffeeshop] {
+        let results: [Coffeeshop] = CoffeshopProvider.all()
+        if searchText.isEmpty {
+            return results
+        } else {
+            return results.filter{
+                $0.name.lowercased().contains(searchText.lowercased())
+            }
         }
-        .padding()
+    }
+    
+    private var suggestedList: [Coffeeshop] {
+        if searchText.isEmpty {
+            return []
+        } else {
+            return coffeshopList
+        }
+    }
+    
+    var body: some View {
+        NavigationStack {
+            List(coffeshopList) { result in
+                NavigationLink(
+                    destination: CoffeShopDetailsView(coffeeshopDetail: result)
+                ) {
+                    HStack {
+                        Image(result.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 130)
+                            .cornerRadius(20)
+                        
+                        
+                        VStack(alignment: .leading){
+                            Text(result.name)
+                                .font(.system(size: 20, design: .rounded))
+                                .fontWeight(.bold)
+                            
+                            Spacer()
+                    
+                        
+                            Text(result.location)
+                                .lineLimit(2)
+                                .font(.system(size: 14, design: .rounded))
+                                .fontWeight(.semibold)
+                                .foregroundColor(.gray)
+                                .truncationMode(.tail)
+                            
+                            Spacer()
+                            
+                            Text("Rating 4/15")
+                                .font(.system(size: 12, design: .rounded))
+                                .foregroundColor(.gray)
+                            
+                            Spacer()
+                          
+                        }.padding(5)
+                    }
+                }
+         
+            }
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always)) {
+                ForEach(suggestedList) { list in
+                    Text("Looking for \(list.name)")
+                        .searchCompletion(list.name)
+                }
+            }
+            .navigationTitle("Coffeshop")
+            
+        }
     }
 }
 
