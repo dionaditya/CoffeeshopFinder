@@ -11,8 +11,11 @@
 		388CCD442927BA280057763F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388CCD432927BA280057763F /* ContentView.swift */; };
 		388CCD462927BA2B0057763F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388CCD452927BA2B0057763F /* Assets.xcassets */; };
 		388CCD492927BA2B0057763F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388CCD482927BA2B0057763F /* Preview Assets.xcassets */; };
-		388CCD542928559E0057763F /* CoffeShopDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388CCD532928559E0057763F /* CoffeShopDetailsView.swift */; };
-		388CCD562928648B0057763F /* CoffeshopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388CCD552928648B0057763F /* CoffeshopModel.swift */; };
+		38BC21E1293B52FF006DD310 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC21E0293B52FF006DD310 /* DetailsView.swift */; };
+		38BC21E5293B5353006DD310 /* CoffeeshopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC21E4293B5353006DD310 /* CoffeeshopListView.swift */; };
+		38BC21E8293B61B7006DD310 /* ActivityView in Frameworks */ = {isa = PBXBuildFile; productRef = 38BC21E7293B61B7006DD310 /* ActivityView */; };
+		38BC21EC293B9178006DD310 /* Coffeeshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BC21EB293B9178006DD310 /* Coffeeshop.swift */; };
+		38BC21EF293B9530006DD310 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 38BC21EE293B9530006DD310 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +24,9 @@
 		388CCD432927BA280057763F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		388CCD452927BA2B0057763F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		388CCD482927BA2B0057763F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		388CCD532928559E0057763F /* CoffeShopDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoffeShopDetailsView.swift; path = View/CoffeShopDetailsView.swift; sourceTree = "<group>"; };
-		388CCD552928648B0057763F /* CoffeshopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoffeshopModel.swift; path = Model/CoffeshopModel.swift; sourceTree = "<group>"; };
+		38BC21E0293B52FF006DD310 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		38BC21E4293B5353006DD310 /* CoffeeshopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopListView.swift; sourceTree = "<group>"; };
+		38BC21EB293B9178006DD310 /* Coffeeshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffeeshop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BC21E8293B61B7006DD310 /* ActivityView in Frameworks */,
+				38BC21EF293B9530006DD310 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,10 +61,10 @@
 		388CCD402927BA280057763F /* CoffeshopFinder */ = {
 			isa = PBXGroup;
 			children = (
+				38BC21DD293B5274006DD310 /* Model */,
+				38BC21DB293B5269006DD310 /* View */,
 				388CCD412927BA280057763F /* CoffeshopFinderApp.swift */,
 				388CCD432927BA280057763F /* ContentView.swift */,
-				388CCD532928559E0057763F /* CoffeShopDetailsView.swift */,
-				388CCD552928648B0057763F /* CoffeshopModel.swift */,
 				388CCD452927BA2B0057763F /* Assets.xcassets */,
 				388CCD472927BA2B0057763F /* Preview Content */,
 			);
@@ -71,6 +77,23 @@
 				388CCD482927BA2B0057763F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38BC21DB293B5269006DD310 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38BC21E0293B52FF006DD310 /* DetailsView.swift */,
+				38BC21E4293B5353006DD310 /* CoffeeshopListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38BC21DD293B5274006DD310 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38BC21EB293B9178006DD310 /* Coffeeshop.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +112,10 @@
 			dependencies = (
 			);
 			name = CoffeshopFinder;
+			packageProductDependencies = (
+				38BC21E7293B61B7006DD310 /* ActivityView */,
+				38BC21EE293B9530006DD310 /* CachedAsyncImage */,
+			);
 			productName = CoffeshopFinder;
 			productReference = 388CCD3E2927BA280057763F /* CoffeshopFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +144,10 @@
 				Base,
 			);
 			mainGroup = 388CCD352927BA280057763F;
+			packageReferences = (
+				38BC21E6293B61B7006DD310 /* XCRemoteSwiftPackageReference "ActivityView" */,
+				38BC21ED293B9530006DD310 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 388CCD3F2927BA280057763F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388CCD542928559E0057763F /* CoffeShopDetailsView.swift in Sources */,
-				388CCD562928648B0057763F /* CoffeshopModel.swift in Sources */,
 				388CCD442927BA280057763F /* ContentView.swift in Sources */,
 				388CCD422927BA280057763F /* CoffeshopFinderApp.swift in Sources */,
+				38BC21E1293B52FF006DD310 /* DetailsView.swift in Sources */,
+				38BC21E5293B5353006DD310 /* CoffeeshopListView.swift in Sources */,
+				38BC21EC293B9178006DD310 /* Coffeeshop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +377,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38BC21E6293B61B7006DD310 /* XCRemoteSwiftPackageReference "ActivityView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUI-Plus/ActivityView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		38BC21ED293B9530006DD310 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38BC21E7293B61B7006DD310 /* ActivityView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38BC21E6293B61B7006DD310 /* XCRemoteSwiftPackageReference "ActivityView" */;
+			productName = ActivityView;
+		};
+		38BC21EE293B9530006DD310 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38BC21ED293B9530006DD310 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 388CCD362927BA280057763F /* Project object */;
 }
