@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38284B81293F62E300B5F475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38284B80293F62E300B5F475 /* LaunchScreen.storyboard */; };
 		388CCD422927BA280057763F /* CoffeshopFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388CCD412927BA280057763F /* CoffeshopFinderApp.swift */; };
 		388CCD442927BA280057763F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388CCD432927BA280057763F /* ContentView.swift */; };
 		388CCD462927BA2B0057763F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388CCD452927BA2B0057763F /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38284B80293F62E300B5F475 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		388CCD3E2927BA280057763F /* CoffeshopFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeshopFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388CCD412927BA280057763F /* CoffeshopFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeshopFinderApp.swift; sourceTree = "<group>"; };
 		388CCD432927BA280057763F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				38BC21DB293B5269006DD310 /* View */,
 				388CCD412927BA280057763F /* CoffeshopFinderApp.swift */,
 				388CCD432927BA280057763F /* ContentView.swift */,
+				38284B80293F62E300B5F475 /* LaunchScreen.storyboard */,
 				388CCD452927BA2B0057763F /* Assets.xcassets */,
 				388CCD472927BA2B0057763F /* Preview Content */,
 			);
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38284B81293F62E300B5F475 /* LaunchScreen.storyboard in Resources */,
 				388CCD492927BA2B0057763F /* Preview Assets.xcassets in Resources */,
 				388CCD462927BA2B0057763F /* Assets.xcassets in Resources */,
 			);
@@ -304,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeshopFinder/Preview Content\"";
@@ -312,6 +317,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeshopFinder/Preview Content\"";
@@ -340,6 +347,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

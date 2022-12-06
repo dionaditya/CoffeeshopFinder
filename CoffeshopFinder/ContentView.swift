@@ -37,7 +37,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             TabView(selection: $selectedTab) {
                CoffeeshopListView(coffeeshopList: coffeshopList)
                 .listStyle(.plain)
